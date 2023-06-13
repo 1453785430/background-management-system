@@ -12,4 +12,5 @@ public class BgmsConfig {
     public static final String BUSINESS_LIST = "businessList";
     public static final String TEST_GIT = "testGit";
     public static final String TEST_GIT1 = "testGit1";
+    public static final String TEST_GIT2 = "testGit2";
 }
