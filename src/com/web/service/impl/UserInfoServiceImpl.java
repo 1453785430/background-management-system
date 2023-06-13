@@ -6,12 +6,10 @@ import com.web.dao.UserInfoDao;
 import com.web.dao.impl.UserInfoDaoImpl;
 import com.web.entity.UserInfo;
 import com.web.service.UserInfoService;
-import com.web.utils.BaseDao2;
 import com.web.utils.BaseResult;
 import com.web.utils.MD5Utils;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 public class UserInfoServiceImpl implements UserInfoService {
     //引入dao层用户查询数据库
@@ -79,8 +77,7 @@ public class UserInfoServiceImpl implements UserInfoService {
             //执行修改
             try {
                 int userId = Integer.parseInt(id);
-                String encrypted = MD5Utils.encryptMD5(password);
-                rows = userInfoDao.updateUserInfoById(userName, encrypted, nickName, tel, address, sex, id);
+                rows = userInfoDao.updateUserInfoById(userName,nickName, tel, address, sex, id);
             } catch (NumberFormatException e) {
                 e.printStackTrace();
                 return BaseResult.error(40002, "参数异常");

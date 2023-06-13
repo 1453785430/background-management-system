@@ -19,7 +19,7 @@ public interface UserInfoDao {
 
     int addUserInfo(String userName,String password,String nickName,String tel,String address,String sex);
 
-    int updateUserInfoById(String userName, String password, String nickName, String tel, String address, String sex, String id);
+    int updateUserInfoById(String userName,String nickName, String tel, String address, String sex, String id);
 
 
     int updateUserStatus(Integer id);

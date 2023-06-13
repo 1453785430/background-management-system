@@ -32,15 +32,15 @@ public class UserInfoDaoImpl extends BaseDao2<UserInfo> implements UserInfoDao {
     }
 
     @Override
-    public int addUserInfo(String userName,String password,String nickName,String tel,String address,String sex) {
+    public int addUserInfo(String userName, String password,String nickName,String tel,String address,String sex) {
         String sql = "insert into t_user_info values(null,?,?,?,?,?,?,default,now(),default)";
         return executeUpdate(sql,userName,password,nickName,tel,address,sex);
     }
 
     @Override
-    public int updateUserInfoById(String userName, String password, String nickName, String tel, String address, String sex, String id) {
-        String sql = "update t_user_info set user_name=?,password=?,nick_name=?,tel=?,address=?,sex=? where id=?";
-        return executeUpdate(sql,userName,password,nickName,tel,address,sex,id);
+    public int updateUserInfoById(String userName, String nickName, String tel, String address, String sex, String id) {
+        String sql = "update t_user_info set user_name=?,nick_name=?,tel=?,address=?,sex=? where id=?";
+        return executeUpdate(sql,userName,nickName,tel,address,sex,id);
     }
 
     @Override

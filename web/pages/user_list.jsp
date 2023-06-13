@@ -499,7 +499,6 @@
                 if (res.code == 200) {
                     document.getElementById("id").value = res.data.id;
                     document.getElementById("userName").value = res.data.userName;
-                    document.getElementById("password").value = res.data.password;
                     document.getElementById("nickName").value = res.data.nickName;
                     document.getElementById("tel").value = res.data.tel;
                     document.getElementById("address").value = res.data.address;
